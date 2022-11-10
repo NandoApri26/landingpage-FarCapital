@@ -1,0 +1,164 @@
+/* Import style font */
+@import url("https://fonts.googleapis.com/css2?family=Anybody:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+/* Akhir Style font */
+
+body,
+ul,
+h1 {
+  margin: 0;
+  padding: 0;
+}
+/* ==== Global Container ==== */
+.container {
+  width: 1344px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* Background Navbar */
+  /* background: #ca965c; */
+}
+#navbar .container {
+  justify-content: space-between;
+}
+
+/* ==== Awal Navbar ==== */
+#navbar {
+  padding: 62px 0;
+  position: fixed;
+  width: 100%;
+}
+#navbar .logo {
+  padding: 0 12px;
+}
+#navbar .logo img {
+  width: auto;
+  height: 60px;
+}
+/* ===== Navbar Menu ===== */
+#navbar .menu {
+  padding: 0 12px;
+}
+#navbar ul {
+  list-style: none;
+}
+#navbar ul::after {
+  content: "";
+  clear: both;
+  display: block;
+}
+#navbar ul li {
+  float: left;
+  margin: 0 24px;
+}
+#navbar ul li a {
+  font-family: "Anybody";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 17px;
+  color: #fff;
+  text-decoration: none;
+}
+#navbar ul li a:hover {
+  border-bottom: 3px solid #fff;
+}
+#navbar ul li a.active {
+  font-weight: bold;
+  color: #fff;
+}
+#navbar .button {
+  padding: 0 12px;
+}
+#navbar .button a {
+  padding: 14px 24px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  gap: 8px;
+  /* Font */
+  font-family: "Anybody";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 17px;
+  color: #61481c;
+  /* button */
+  background-color: #fff;
+  border-radius: 5px;
+  text-decoration: none;
+}
+#navbar .button a:hover {
+  background-color: #eae3d2;
+}
+/* ===== Akhir Navbar ===== */
+
+/* ===== Awal Hero ===== */
+#Hero {
+  background-color: #0d1728;
+  height: 100vh;
+  /* Background Image */
+  background-image: url("../assets/Background Grup.png");
+  background-position: -295px -449px;
+}
+#Hero .containt {
+  padding: 0 12px;
+  margin-top: 191px;
+}
+#Hero .containt p {
+  font-family: "Anybody";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 25px;
+  /* identical to box height */
+  text-align: center;
+  color: #ffffff;
+  opacity: 0.7;
+}
+#Hero .containt h1 {
+  font-family: "Anybody";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 72px;
+  line-height: 138%;
+  /* or 99px */
+  text-align: center;
+  margin-bottom: 32px;
+
+  color: #ffffff;
+}
+#Hero .containt .getting-started {
+  width: 50%;
+  margin: 0 auto;
+  border: 1px solid #fff;
+  border-radius: 1000px;
+}
+#Hero .containt .getting-started form {
+  display: flex;
+  margin: 0;
+}
+#Hero .containt .getting-started input {
+  padding: 32px 48px;
+  font-family: "Anybody";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 19px;
+  color: #ffffff;
+  background: transparent;
+  border: 0;
+  flex-grow: 1;
+}
+#Hero .containt .getting-started button {
+  padding: 32px 48px;
+  font-family: "Anybody";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 21px;
+
+  color: #293241;
+  border: 0;
+  border-radius: 1000px;
+} /* ===== Akhir Hero ===== */
