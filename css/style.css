@@ -1,20 +1,41 @@
 /* Import style font */
 @import url("https://fonts.googleapis.com/css2?family=Anybody:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Anybody:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
 /* Akhir Style font */
 
 body,
 ul,
+ol,
 h1,
+h2,
+h3,
+h4,
+h5,
 h6 {
   margin: 0;
   padding: 0;
 }
 /* Col */
-.col-4 {
-  width: calc((100% / 3) - 24px);
+.col {
+  margin: 0 12px;
 }
 .col-3 {
   width: calc((100% / 4) - 24px);
+}
+.col-4 {
+  width: calc((100% / 3) - 24px);
+}
+.col-5 {
+  width: calc((100% * 5 / 12) - 24px);
+}
+.col-6 {
+  width: calc((100% / 2) - 24px);
+}
+.col-8 {
+  width: calc((100% * 2 / 3) - 24px);
+}
+.col-10 {
+  width: calc((100% * 5 / 6) - 24px);
 }
 
 /* ==== Global Container ==== */
@@ -24,14 +45,37 @@ h6 {
   display: flex;
   align-items: center;
   justify-content: center;
+  /* flex-wrap: wrap; */
   /* Background Navbar */
-  /* background: #ca965c; */
 }
+.container .title {
+  margin-bottom: 70px;
+}
+.container .title h2 {
+  font-family: "Anybody";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 130%;
+  text-align: center;
+  color: #293241;
+}
+.container .title p {
+  font-family: "Anybody";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 25px;
+  text-align: center;
+  color: #7f848d;
+  opacity: 0.7;
+}
+
+/* ==== Awal Navbar ==== */
 #navbar .container {
   justify-content: space-between;
 }
 
-/* ==== Awal Navbar ==== */
 #navbar {
   padding: 62px 0;
   position: absolute;
@@ -110,29 +154,32 @@ h6 {
   background-color: #293241;
   background-image: url("../assets/Background Grup.png");
   background-position: -295px -449px;
+  margin-bottom: 150px;
 }
 #Hero .containt {
   padding: 0 12px;
   margin-top: 191px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
-#Hero .containt p {
+#Hero .containt .title p {
   font-family: "Anybody";
   font-style: normal;
   font-weight: 400;
   font-size: 24px;
   line-height: 25px;
-  /* identical to box height */
   text-align: center;
   color: #ffffff;
   opacity: 0.7;
 }
-#Hero .containt h1 {
+#Hero .container .containt .title h1 {
   font-family: "Anybody";
   font-style: normal;
   font-weight: 700;
   font-size: 72px;
   line-height: 138%;
-  /* or 99px */
   text-align: center;
   margin-bottom: 32px;
 
@@ -175,10 +222,7 @@ h6 {
 } /* ===== Akhir Hero ===== */
 
 /* Awal Customer */
-#Customer .container {
-  justify-content: space-between;
-}
-#Customer .container h3 {
+#Customer .container h2 {
   padding-top: 423px;
   font-family: "Anybody";
   font-style: normal;
@@ -210,23 +254,8 @@ h6 {
 }
 /* Akhir Customer */
 
-/* Awal Work */
-
-#Work .container:first-child {
-  display: block;
-}
-#Work .container:first-child h3 {
-  text-align: center;
-  font-family: "Anybody";
-  font-style: normal;
-  font-weight: 700;
-  font-size: 48px;
-  line-height: 130%;
-  text-align: center;
-  color: #293241;
-  margin-bottom: 24px;
-}
-#Work .container:first-child p {
+/* Awal How It Work Title */
+#HowitWorkTitle .container .title p {
   font-family: "Inter";
   font-style: normal;
   font-weight: 400;
@@ -234,27 +263,39 @@ h6 {
   line-height: 29px;
   text-align: center;
   color: #7f848d;
-  margin-bottom: 70px;
 }
-#Work .container .card {
-  background-color: #1e2746;
-  background-image: url("../assets/icons/icon-Work.png");
-  background-position: top;
+/* Akhir How It Work Title */
+
+/* Awal How It Wor */
+#HowitWork {
+  background-image: url(../assets/icons/description-line.png);
   background-repeat: no-repeat;
-  margin: 41px 12px;
-  padding: 0 24px;
-  border-radius: 10px;
+  background-position: center center;
+  margin-bottom: 200px;
 }
-#Work .container .card h6 {
+#HowitWork .card {
+  width: calc((25%) - 24px - 48px);
+  padding: 24px;
+  background-color: #1e2746;
+  background-image: url("../assets/icons/bg-work.png");
+  background-repeat: no-repeat;
+  border-radius: 18px;
+  margin: 41px 12px;
+}
+
+#HowitWork .container .card ol {
+  padding-left: 30px;
+  margin-bottom: 16px;
+}
+#HowitWork .container .card li {
   font-family: "Anybody";
   font-style: normal;
   font-weight: 700;
   font-size: 18px;
   line-height: 32px;
-  color: #fff;
-  margin: 16px 0;
+  color: #ffffff;
 }
-#Work .container .card p {
+#HowitWork .container .card p {
   font-family: "Anybody";
   font-style: normal;
   font-weight: 400;
@@ -262,9 +303,364 @@ h6 {
   line-height: 24px;
   color: #d4d6d9;
 }
-#Work .container img {
-  position: absolute;
-  width: 100%;
-  height: 282px;
+/* Akhir How It Work */
+
+/* Awal Analisis */
+#Analisis .container {
+  justify-content: space-between;
+  margin-bottom: 192.9px;
 }
-/* Akhir Work */
+#Analisis .card {
+  background-color: #1e2746;
+  border-radius: 16px;
+  display: flex;
+  padding: 32px 24px;
+  justify-content: space-between;
+  align-items: center;
+  margin: 27.55px 0;
+  position: relative;
+  left: 0;
+  transition: 0.7s;
+}
+#Analisis .card:hover {
+  left: 24px;
+}
+#Analisis .container .Diagram .img-name {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#Analisis .container .Diagram .card p {
+  font-family: "Anybody";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 24px;
+  color: #ffffff;
+  margin-left: 12px;
+}
+#Analisis .container .analisis-desc h2 {
+  font-family: "Anybody";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 130%;
+  color: #293241;
+}
+#Analisis .container .analisis-desc p {
+  font-family: "Anybody";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 34px;
+  color: #7f848d;
+  padding: 24.65px 0;
+}
+/* Akhir Analisis */
+
+/* Awal Graph Analisis */
+#Graph {
+  background-color: #1e2746;
+}
+#Graph .container {
+  padding: 150px 0;
+  display: flex;
+  justify-content: space-between;
+}
+#Graph .container .analytise span {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  color: #293241;
+  background-color: #edcb50;
+  border-radius: 8px;
+  padding: 6px 16px;
+}
+#Graph .container .analytise ul {
+  list-style: none;
+}
+#Graph .container .analytise ul li::before {
+  content: "";
+  display: inline-block;
+  background-image: url(../assets/icons/Archery.png);
+  width: 32px;
+  height: 32px;
+  background-repeat: no-repeat;
+  margin-right: 16px;
+}
+#Graph .container ul li {
+  font-family: "Anybody";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 19px;
+  color: #d4d6d9;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  margin: 16px 0;
+}
+#Graph .container .analytise h2 {
+  font-family: "Anybody";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 130%;
+  color: #ffffff;
+  padding: 24px 0 32px;
+}
+#Graph .container .analytise > .item p {
+  font-family: "Anybody";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 19px;
+  color: #d4d6d9;
+  margin-left: 16px;
+}
+/* Akhir Graph Analisis */
+
+/* Start Pricing */
+#Pricing {
+  background-color: #f0f9ff;
+}
+#Pricing .card {
+  border: 1px solid transparent;
+  transition: 0.6s;
+}
+#Pricing .yellow {
+  background-color: #fff;
+  border-radius: 24px;
+}
+#Pricing .container .blue {
+  background-color: #fff;
+  background-image: url(../assets/icons/bg-work.png);
+  background-repeat: no-repeat;
+  border-radius: 24px;
+}
+#Pricing .container .green {
+  background-color: #fff;
+  border-radius: 24px;
+}
+#Pricing .container .yellow:hover {
+  border: 1.5px solid #edcb50;
+  scale: 1.1;
+}
+#Pricing .container .blue:hover {
+  border: 1.5px solid #1681fe;
+  scale: 1.1;
+}
+#Pricing .container .green:hover {
+  border: 1.5px solid #448c74;
+  scale: 1.1;
+}
+#Pricing .title {
+  margin-top: 150px;
+}
+#Pricing .yellow .pricing-box {
+  display: flex;
+  margin: 32px 0 0 32px;
+  gap: 12px;
+}
+#Pricing .blue .pricing-box {
+  display: flex;
+  margin: 32px 0 0 32px;
+  gap: 12px;
+}
+#Pricing .green .pricing-box {
+  display: flex;
+  margin: 32px 0 0 32px;
+  gap: 12px;
+}
+#Pricing .yellow .icon-box {
+  background-color: #edcb50;
+  width: 72px;
+  height: 72px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#Pricing .container .blue .icon-box {
+  background-color: #1681fe;
+  width: 72px;
+  height: 72px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#Pricing .container .green .icon-box {
+  background-color: green;
+  width: 72px;
+  height: 72px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#Pricing .price {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 82px;
+}
+#Pricing .yellow .price .badge {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  text-align: center;
+  color: #edcb50;
+}
+#Pricing .blue .price .badge {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  text-align: center;
+  color: #1681fe;
+}
+#Pricing .blue .price .recomented {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  color: #ffffff;
+  background-color: #1681fe;
+}
+#Pricing .green .price .badge {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  text-align: center;
+  color: green;
+}
+#Pricing .info {
+  display: flex;
+  gap: 8px;
+  align-items: baseline;
+}
+#Pricing .pricing-box .price h4 {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 36px;
+  line-height: 42px;
+  color: #293241;
+}
+#Pricing .price .info h4 span {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 42px;
+  color: #293241;
+}
+#Pricing .price .info span {
+  font-family: "Inter";
+  font-style: italic;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  color: #545b67;
+  margin-left: 8px;
+}
+#Pricing .container .card ul {
+  list-style: none;
+  margin: 0 0 0 32px;
+}
+#Pricing .container .card .approve li {
+  display: flex;
+  align-items: center;
+  font-family: "Anybody";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 17px;
+  color: #293241;
+  margin: 16px 0;
+}
+#Pricing .container .yellow .approve li::before {
+  width: 24px;
+  height: 24px;
+  content: " ";
+  display: inline-block;
+  background-image: url(../assets/icons/Approve.png);
+  background-repeat: no-repeat;
+  margin-right: 10px;
+}
+#Pricing .container .blue .approve li::before {
+  width: 24px;
+  height: 24px;
+  content: " ";
+  display: inline-block;
+  background-image: url(../assets/icons/ApproveBlue.png);
+  background-repeat: no-repeat;
+  margin-right: 10px;
+}
+#Pricing .container .green .approve li::before {
+  width: 24px;
+  height: 24px;
+  content: " ";
+  display: inline-block;
+  background-image: url(../assets/icons/ApproveGreen.png);
+  background-repeat: no-repeat;
+  margin-right: 10px;
+}
+#Pricing .container .card .close li {
+  display: flex;
+  align-items: center;
+  font-family: "Anybody";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 17px;
+  color: #a9adb3;
+  margin: 16px 0;
+}
+#Pricing .container .card .close li::before {
+  width: 24px;
+  height: 24px;
+  content: "";
+  display: inline-block;
+  background-image: url(../assets/icons/Close.png);
+  background-repeat: no-repeat;
+  margin-right: 10px;
+}
+#Pricing .container .yellow button {
+  border: 1px solid #edcb50;
+  background-color: transparent;
+  width: 360px;
+  height: 47px;
+  color: #edcb50;
+  margin: 50px 32px 32px;
+  border-radius: 12px;
+}
+#Pricing .container .blue button {
+  border: 1px solid #1681fe;
+  background-color: transparent;
+  width: 360px;
+  height: 47px;
+  color: #1681fe;
+  margin: 50px 32px 32px;
+  border-radius: 12px;
+}
+#Pricing .container .green button {
+  border: 1px solid green;
+  background-color: transparent;
+  width: 360px;
+  height: 47px;
+  color: green;
+  margin: 50px 32px 32px;
+  border-radius: 12px;
+}
+/* End Pricing */
